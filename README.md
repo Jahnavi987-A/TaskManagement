@@ -1,6 +1,6 @@
 # 📌 Task Management System
 
-A **Spring Boot RESTful API** for managing tasks with CRUD operations, integrated with **MySQL database**, and documented using Swagger UI. It also includes a **Recommended Task Feature** that helps users prioritize tasks based on deadlines and priority.
+A **Spring Boot RESTful API** for managing tasks with CRUD operations, integrated with **MySQL database**, and documented using Swagger UI. It also includes a **Recommended Task Feature** that helps users prioritize tasks based on deadlines and priority.It is tested using **Postman** to ensure all endpoints work as expected and data persists correctly in the MySQL database.
 
 
 ## 🚀 Features
@@ -47,6 +47,7 @@ TaskManagement/<br>
 ## ⚙️ Installation & Setup<br>
 1️⃣ Clone the repository<br>
  - git clone https://github.com/your-username/TaskManagement-SpringBoot.git<br>
+
  - cd TaskManagement-SpringBoot<br>
 
 
@@ -56,6 +57,7 @@ TaskManagement/<br>
 Base URL: http://localhost:8080<br>
 
 - POST	 -       /tasks	        -     Create a new task <br>
+
 - GET	-        /tasks	         -    Get all tasks<br>
 - GET	 -       /tasks/{id}	 -    Get task by ID<br>
 - PUT	 -       /tasks/{id}	-     Update a task<br>
@@ -78,10 +80,25 @@ Here, you can test all endpoints interactively.
 Update your application.properties file with your MySQL credentials:
 
 - spring.datasource.url=jdbc:mysql://localhost:3306/task_management_db
+  
 - spring.datasource.username=your_username
-- spring.datasource.password=your_password
+  
+- spring.datasource.password=your_passwor
+  
 - spring.jpa.hibernate.ddl-auto=update
 - spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
+## 🧪 Testing
+
+All REST API endpoints were thoroughly tested using Postman to verify correct functionality. The tests included:
+
+- ✅ Validating successful CRUD operations (create, read, update, delete).
+
+- ✅ Checking error handling for invalid inputs and non-existent IDs.
+
+- ✅ Ensuring database persistence in MySQL after each operation.
+
+- ✅ Verifying the Recommended Task API returns tasks in correct priority order.
 
 
 ## ✨ Future Improvements
